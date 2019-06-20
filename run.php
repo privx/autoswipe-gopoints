@@ -48,6 +48,20 @@ foreach($wa['wallet_balances'] as $key => $value){
 	print "$info\r\n";
 }
 
+function headers(){
+	$headers = array();
+	$headers[] = 'X-Appversion: 3.30.2';
+	$headers[] = 'X-UniqueId: 3fb2d2562795bd47';
+	$headers[] = 'X-Platform: Android';
+	$headers[] = 'X-Appid: com.gojek.app';
+	$headers[] = 'Accept: application/json';
+	$headers[] = 'Content-Type: application/json';
+	/** Don't you try to edit this one */
+	$headers[] = 'If-Modified-Since: '.date("D, d M Y").' 	'.date("h:i:s").' GMT';
+	return $headers;
+	/* Don't you try to edit this one **/
+}
+
 function checkWallet($headers){
 	$ch = curl_init();
 
@@ -101,18 +115,4 @@ function redeemPoints($headers,$id){
 	}
 	curl_close($ch);
 	return $hasil;
-}
-
-function headers(){
-	$headers = array();
-	$headers[] = 'X-Appversion: 3.30.2';
-	$headers[] = 'X-UniqueId: 3fb2d2562795bd47';
-	$headers[] = 'X-Platform: Android';
-	$headers[] = 'X-Appid: com.gojek.app';
-	$headers[] = 'Accept: application/json';
-	$headers[] = 'Content-Type: application/json';
-	/** Don't you try to edit this one */
-	$headers[] = 'If-Modified-Since: '.date("D, d M Y").' 	'.date("h:i:s").' GMT';
-	return $headers;
-	/* Don't you try to edit this one **/
 }

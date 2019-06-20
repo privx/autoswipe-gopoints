@@ -1,7 +1,7 @@
 <?php
 
 /**
- * An Auto Swipe form GO-POINTS on GO-JEK
+ * An Auto Swipe form GO-POINTS from GO-JEK
  *
  * PHP version 5
  *

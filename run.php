@@ -5,10 +5,10 @@
  *
  * PHP version 5
  *
- * @category	Auto Based
+ * @category		Auto Based
  * @package		Auto Swipe GO-POINTS
- * @author		BIMA_GATES <akujuga@mailnesia.com>
- * @source    https://www.go-jek.com/go-points/
+ * @author		BIMA_GATES <bimagates8@gmail.com>
+ * @link		https://www.go-jek.com/go-points/
  */
 
 $headers = headers(); // Do not touch anything you see here, edit the full headers down there
@@ -16,12 +16,12 @@ $headers = headers(); // Do not touch anything you see here, edit the full heade
 /**
  * Executing the programs
  *
- * @notes			You need to change your Headers right down there
+ * @notes		You need to change your Headers right down there
  *
- * @param string	$headers    The Headers
+ * @param string	headers()
  * @return object	The Auto's payload as a PHP object
- * @uses			jsonDecode
- * @uses			Looping while/for
+ * @uses		jsonDecode
+ * @uses		Looping for/foreach
 */
 
 $wa = json_decode(checkWallet($headers),True);

@@ -32,11 +32,11 @@ for($a=0;$a<$tokenleft;$a++){
 	$cP = json_decode(checkPoints($headers),True);
 	$no = $a+1;
 	
-	$result						= array();	
-	$result['no']				= $no;
+	$result				= array();	
+	$result['no']			= $no;
 	$result['redeem_points']	= "Points ".$cW['points_balance']." - ".$cW['tokens_balance']." tokens left";
-	$result['info']				= "Poin ".$cP['data']['points'];
-	$result['status']			= redeemPoints($headers,$cP['data']['points_token_id']);
+	$result['info']			= "Poin ".$cP['data']['points'];
+	$result['status']		= redeemPoints($headers,$cP['data']['points_token_id']);
 	print_r($result);
 	echo PHP_EOL;
 }

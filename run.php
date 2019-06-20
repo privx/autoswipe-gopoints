@@ -24,21 +24,28 @@ $headers = headers(); // Do not touch anything you see here, edit the full heade
  * @uses			Looping while/for
 */
 
-$tokenleft = json_decode(checkWallet($headers),True)['tokens_balance'];
+$wa = json_decode(checkWallet($headers),True);
+echo PHP_EOL;
 
-for($a=0;$a<$tokenleft;$a++){
+for($a=0;$a<$wa['tokens_balance'];$a++){
 	
 	$cW = json_decode(checkWallet($headers),True);
 	$cP = json_decode(checkPoints($headers),True);
 	$no = $a+1;
 	
-	$result				= array();	
-	$result['no']			= $no;
+	$result						= array();	
+	$result['no']				= $no;
 	$result['redeem_points']	= "Points ".$cW['points_balance']." - ".$cW['tokens_balance']." tokens left";
-	$result['info']			= "Poin ".$cP['data']['points'];
-	$result['status']		= redeemPoints($headers,$cP['data']['points_token_id']);
+	$result['info']				= "Poin ".$cP['data']['points'];
+	$result['status']			= redeemPoints($headers,$cP['data']['points_token_id']);
 	print_r($result);
 	echo PHP_EOL;
+}
+
+echo "There's some points will be expired soon".PHP_EOL;
+foreach($wa['wallet_balances'] as $key => $value){
+	$info = ($key+1)." > ".$value['balance']." points will be expired at ".$value['expiry_at'];
+	print "$info\r\n";
 }
 
 function checkWallet($headers){
@@ -104,5 +111,8 @@ function headers(){
 	$headers[] = 'X-Appid: com.gojek.app';
 	$headers[] = 'Accept: application/json';
 	$headers[] = 'Content-Type: application/json';
+	/** Don't you try to edit this one */
+	$headers[] = 'If-Modified-Since: '.date("D, d M Y").' 	'.date("h:i:s").' GMT';
 	return $headers;
+	/* Don't you try to edit this one **/
 }

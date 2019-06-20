@@ -16,7 +16,7 @@ $headers = headers(); // Do not touch anything you see here, edit the full heade
 /**
  * Executing the programs
  *
- * @note		You need to change your Headers right down there
+ * @notes		You need to change your Headers right down there
  *
  * @param string	headers()
  * @return object	The Auto's payload as a PHP object

@@ -17,4 +17,4 @@ Automatically swipe your points ;)
     - Enjoy the auto swipe without any tired
     
 ## Screenshot
-![Alt text](https://scontent.fcgk1-1.fna.fbcdn.net/v/t1.15752-9/64503726_317484879193018_7427660396674154496_n.png?_nc_cat=102&_nc_oc=AQlVVtk_Bey_PxUYyRCjm2oQmFh9mBsHJO9rhGUm14_wHPfP3NUPuDXJisZ0P5Yeuw0&_nc_ht=scontent.fcgk1-1.fna&oh=6da3ce7e13e16e70313bddbe60a28940&oe=5D7DE303 "Example")
+![Alt text](https://scontent.fcgk1-1.fna.fbcdn.net/v/t1.15752-9/65124098_1544260452376007_5577433058727952384_n.png?_nc_cat=104&_nc_oc=AQmDwQ8AAurJcjjqeMsPEKRQ-yR7c-GAEHP0Y27U4oqlPv8Ip62SmRM-u24K4yybNCs&_nc_ht=scontent.fcgk1-1.fna&oh=3fcb969e8d75cd5ad552e2f5c53cd960&oe=5D8AFBD8 "Example")
